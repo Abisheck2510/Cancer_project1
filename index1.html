@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Patient Dashboard</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app1.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <div class="navbar-brand">Cancer Patient Data</div>
+    </nav>
+
+    <div class="container">
+        <input type="file" id="csvFile" accept=".csv">
+        <label for="ipNumber">IP Number:</label>
+        <input type="text" id="ipNumber">
+        <button id="searchButton">Search</button>
+
+        <div id="patientDetails">
+            <!-- Patient details will be displayed here -->
+        </div>
+
+        <canvas id="survivalChart"></canvas>
+    </div>
+
+</body>
+</html>

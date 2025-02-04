@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #212529;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 0.85rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+/* Button */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Patient Details */
+#patientDetails {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border: 2px solid #17a2b8;
+    border-radius: 10px;
+    background-color: #e3f2fd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* Create two equal columns */
+    gap: 1rem;
+}
+
+#patientDetails h3 {
+    grid-column: 1 / -1;
+    /* Span the full width */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #007bff;
+    text-align: center;
+}
+
+.patient-info {
+    background-color: #d1ecf1;
+    padding: 0.75rem;
+    border-left: 4px solid #17a2b8;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #343a40;
+    word-break: break-word;
+    /* Prevent long words from breaking the layout */
+    line-height: 1.3;
+    /* Reduced line height */
+    margin-bottom: 5px;
+    /* Reduced margin-bottom */
+}
+
+#patientDetails:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Chart */
+#survivalChart {
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    button {
+        width: auto;
+    }
+
+    #patientDetails {
+        grid-template-columns: 1fr;
+        /* Stack items on smaller screens */
+    }
+}
